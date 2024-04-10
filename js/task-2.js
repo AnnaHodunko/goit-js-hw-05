@@ -23,6 +23,12 @@
 //  для перевірки коректності її роботи. У консоль будуть 
 //  виведені результати її роботи.
 
+
+
+const getUsersWithFriend = (users, friendName) => {
+  return users.filter(name => name.friends.includes(friendName));
+}
+
 const allUsers = [
   {
     name: "Moore Hensley",
@@ -53,11 +59,6 @@ const allUsers = [
     friends: ["Goldie Gentry", "Briana Decker"]
   }
 ];
-
-getUsersWithFriend = (users, friendName) => {
-  const friends = allUsers.filter(name => name.friends.includes(friendName));
-  return friends;
-}
 
 console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
 // [

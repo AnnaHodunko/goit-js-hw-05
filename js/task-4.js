@@ -14,9 +14,9 @@
 //  для перевірки коректності її роботи. У консоль будуть 
 //  виведені результати її роботи.
 
-getTotalBalanceByGender = (users, gender) => {
+const getTotalBalanceByGender = (users, gender) => {
     return users
-    .filter(user => user.gender === gender)
+    .filter(users => users.gender === gender)
     .reduce((totalBalance, user) => totalBalance + user.balance, 0);
 }
 const clients = [
